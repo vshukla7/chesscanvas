@@ -1,0 +1,57 @@
+{
+  "name": "@vshukla7/chesscanvas",
+  "version": "1.0.0",
+  "description": "A scriptable, deterministic chess-board rendering engine for programmatic video (Remotion) and canvas use",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./remotion": {
+      "types": "./dist/remotion/index.d.ts",
+      "import": "./dist/remotion/index.js",
+      "require": "./dist/remotion/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "dependencies": {
+    "chess.js": "^1.0.0-beta.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.52",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1"
+  },
+  "keywords": [
+    "chess",
+    "remotion",
+    "canvas",
+    "video",
+    "deterministic",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}
